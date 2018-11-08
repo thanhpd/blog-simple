@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar" color="primary">
+  <span>{{appConfig.getConfig().appName}}</span>
+  <div class="toolbar__child toolbar__user">
+    <button mat-button class="toolbar__button" [matMenuTriggerFor]="userMenu">
+      <mat-icon title="Account information">account_circle</mat-icon>
+      <span>{{authService.user?.username}}</span>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+  <button mat-menu-item (click)="onLogout()">
+    <mat-icon>launch</mat-icon>
+    Logout
+  </button>
+</mat-menu>
+<mat-card>
+  <blog-post-list></blog-post-list>
+</mat-card>

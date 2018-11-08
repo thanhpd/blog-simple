@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-end">
+  <button mat-raised-button color="primary" (click)="createPost()">
+    <i class="material-icons">note_add</i>
+    Create a post
+  </button>
+</div>
+<table #postTable mat-table [dataSource]="postService.posts">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let post"><strong>{{post.id}} </strong></td>
+  </ng-container>
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Title</th>
+    <td mat-cell *matCellDef="let post">{{post.title}} </td>
+  </ng-container>
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef>Author</th>
+    <td mat-cell *matCellDef="let post">{{post.author}} </td>
+  </ng-container>
+  <ng-container matColumnDef="url">
+    <th mat-header-cell *matHeaderCellDef>URL</th>
+    <td mat-cell *matCellDef="let post">
+      <pre style="margin: 0 5px">{{post.url}}</pre>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="publishTime">
+    <th mat-header-cell *matHeaderCellDef>Publish time</th>
+    <td mat-cell *matCellDef="let post">{{post.publishTime | date:'shortDate'}} </td>
+  </ng-container>
+  <ng-container matColumnDef="tags">
+    <th mat-header-cell *matHeaderCellDef>Tags</th>
+    <td mat-cell *matCellDef="let post">
+      <mat-chip-list>
+        <mat-chip *ngFor="let tag of post.tags">{{tag}}</mat-chip>
+      </mat-chip-list>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="content">
+    <th mat-header-cell *matHeaderCellDef>Content</th>
+    <td mat-cell *matCellDef="let post">{{post.content | preview}} </td>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let post">
+      <button mat-icon-button color="primary" matTooltip="View post details" (click)="viewPost(post)">
+        <mat-icon aria-label="View post details">visibility</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" matTooltip="Edit post" (click)="updatePost(post)">
+        <mat-icon aria-label="Edit post">edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" matTooltip="Delete post" (click)="deletePost(post.id)">
+        <mat-icon aria-label="Delete post">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

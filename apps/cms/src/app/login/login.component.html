@@ -1,3 +1,47 @@
-<p>
-  login works!
-</p>
+<div class="wrapper">
+  <div class="row dark-theme va-centre">
+    <div class="va-centre__wrapper">
+      <div class="title col-md-6 offset-md-1 d-none d-sm-block">
+        <h1>Welcome</h1>
+        <p>Sign in to continue</p>
+      </div>
+      <div class="card col-md-4 col-sm-6 col-xs-10 offset-xs-1">
+        <div class="card__header">
+          <h1>Login</h1>
+        </div>
+        <div class="card__body" *ngIf="!isLoading withLoading">
+          <mat-error *ngIf="loginForm.hasError('badCredentials')">
+            {{validationMessages.form.badCredentials}}
+          </mat-error>
+          <mat-error *ngIf="loginForm.hasError('other')">
+            {{validationMessages.form.other}}
+          </mat-error>
+          <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="form__row">
+              <mat-form-field>
+                <input matInput type="text" required placeholder="Username" formControlName="username" />
+                <mat-error *ngIf="loginForm.get('username').hasError('required')">
+                  {{validationMessages.username.required}}
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('username').hasError('userNotFound')">
+                  {{validationMessages.username.notFound}}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form__row">
+              <mat-form-field>
+                <input matInput type="password" required placeholder="Password" formControlName="password" />
+                <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                  {{validationMessages.password.required}}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-submission">
+              <button type="submit" class="button-primary" mat-flat-button color="primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

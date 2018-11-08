@@ -24,9 +24,16 @@
             "tsConfig": "apps/cms/tsconfig.app.json",
             "assets": [
               "apps/cms/src/favicon.ico",
-              "apps/cms/src/assets"
+              "apps/cms/src/assets",
+              {
+                "glob": "appConfig.json",
+                "input": "apps/cms/src/configs",
+                "output": "/"
+              }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
               "apps/cms/src/styles.scss"
             ],
             "scripts": []
@@ -37,6 +44,10 @@
                 {
                   "replace": "apps/cms/src/environments/environment.ts",
                   "with": "apps/cms/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "apps/cms/src/configs/appConfig.json",
+                  "with": "apps/cms/src/configs/appConfig.prod.json"
                 }
               ],
               "optimization": true,
@@ -61,6 +72,10 @@
                 {
                   "replace": "apps/cms/src/environments/environment.ts",
                   "with": "apps/cms/src/environments/environment.hmr.ts"
+                },
+                {
+                  "replace": "apps/cms/src/configs/appConfig.json",
+                  "with": "apps/cms/src/configs/appConfig.hmr.json"
                 }
               ]
             }

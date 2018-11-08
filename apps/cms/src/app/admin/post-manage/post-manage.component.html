@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<form [formGroup]="postForm" (ngSubmit)="onFormSubmission()" novalidate>
+  <mat-dialog-content>
+    <mat-form-field class="col-md-6">
+      <input type="text" matInput required placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="col-md-6">
+      <input type="text" matInput required placeholder="Author" formControlName="author">
+    </mat-form-field>
+    <mat-form-field class="col-md-6">
+      <input type="url" matInput required placeholder="URL" formControlName="url">
+    </mat-form-field>
+    <mat-form-field class="col-md-6">
+      <input type="text" matInput placeholder="Tags" formControlName="tags">
+    </mat-form-field>
+    <mat-form-field class="col-md-6">
+      <input matInput [matDatepicker]="myDatepicker" formControlName="publishTime" placeholder="Publish time" required>
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="col-md-12">
+      <textarea type="text" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5"
+        cdkAutosizeMaxRows="10" required placeholder="Content" formControlName="content"></textarea>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button type="submit" mat-button>Submit</button>
+    <button mat-button mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+</form>

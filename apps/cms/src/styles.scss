@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.wrapper {
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+.title {
+  color: #ffffff;
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+.va-centre {
+  height: 100%;
+  display: block;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.card {
+  border-radius: 2px;
+  padding: 0 40px;
+  &__header {
+    margin: 10px 0;
+  }
+  &__body {
+    margin: 0 0 20px 0;
+  }
+}
+
+.dark-theme {
+  .card {
+    background-color: rgba(255, 255, 255, .8);
+  }
+}
+
+.form {
+  .form__row {
+    margin-bottom: 10px;
+    &:last-of-type:not(.row) {
+      margin: 0;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+    &.txt-area-below {
+      margin-bottom: 50px;
+    }
+    &.select-below {
+      margin-bottom: 30px;
+    }
+  }
+  &__submission {
+    margin-top: 30px;
+  }
+}
+
+.toolbar {
+  justify-content: space-between;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.component-title {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.table {
+  &.table-material {
+    font-size: 14px;
+    thead tr th {
+      height: 56px;
+      vertical-align: middle;
+      color: rgba(0, 0, 0, .87);
+    }
+    tbody tr {
+      th,
+      td {
+        height: 48px;
+        vertical-align: middle;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.paginator {
+  float: right;
+}
+
+.row.equal {
+  display: flex;
+  [class^=col] {
+    align-items: stretch;
+    align-self: center;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.error {
+  font-size: .75em;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}

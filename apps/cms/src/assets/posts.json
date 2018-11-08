@@ -1,0 +1,129 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "url": "/guide/security",
+      "title": "Security",
+      "publishTime": 1541548800000,
+      "tags": [
+        "security"
+      ],
+      "author": "angular",
+      "authorUrl": "https://github.com/angular",
+      "content": "This page describes Angular's built-in protections against common web-application vulnerabilities and attacks such as cross-site scripting attacks. It doesn't cover application-level security, such as authentication (Who is this user?) and authorization (What can this user do?). For more information about the attacks and mitigations described below, see OWASP Guide Project. You can run the live example / download example in Stackblitz and download the code from there."
+    },
+    {
+      "id": 2,
+      "url": "/guide/i18n",
+      "title": "Internationalization (i18n)",
+      "publishTime": 1541508800000,
+      "tags": [
+        "i18n",
+        "internationalization"
+      ],
+      "author": "angular",
+      "authorUrl": "https://github.com/angular",
+      "content": "Internationalization is the process of designing and preparing your app to be usable in different languages. Localization is the process of translating your internationalized app into specific languages for particular locales.\n\nAngular simplifies the following aspects of internationalization:\n\n    Displaying dates, number, percentages, and currencies in a local format.\n    Preparing text in component templates for translation.\n    Handling plural forms of words.\n    Handling alternative text.\n\nFor localization, you can use the Angular CLI to generate most of the boilerplate necessary to create files for translators, and to publish your app in multiple languages. After you have set up your app to use i18n, the CLI can help you with the following steps:\n\n    Extracting localizable text into a file that you can send out to be translated.\n    Building and serving the app for a given locale, using the translated text.\n    Creating multiple language versions of your app.\n"
+    },
+    {
+      "id": 3,
+      "url": "/guide/universal",
+      "title": "Angular Universal: server-side rendering",
+      "publishTime": 1541348800000,
+      "tags": [
+        "universal",
+        "ssr"
+      ],
+      "author": "angular",
+      "authorUrl": "https://github.com/angular",
+      "content": "\nThis guide describes Angular Universal, a technology that runs your Angular application on the server.\n\nA normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal generates static application pages on the server through a process called server-side rendering (SSR). When Universal is integrated with your app, it can generate and serve those pages in response to requests from browsers. It can also pre-generate pages as HTML files that you serve later.\n\nYou can easily prepare an app for server-side rendering using the Angular CLI. The CLI schematic @nguniversal/express-engine performs the required steps, as described below.\n\nThis guide describes a Universal sample application that launches quickly as a server-rendered page. Meanwhile, the browser downloads the full client version and switches to it automatically after the code loads.\n      "
+    },
+    {
+      "id": 4,
+      "url": "/guide/updating",
+      "title": "Updating your Angular projects",
+      "publishTime": 1540638900000,
+      "tags": [
+        "updating"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "Just like Web and the entire web ecosystem, Angular is continuously improving. Angular balances continuous improvement with a strong focus on stability and making updates easy. Keeping your Angular app up-to-date enables you to take advantage of leading-edge new features, as well as optimizations and bug fixes.\n\n      This document contains information and resources to help you keep your Angular apps and libraries up-to-date.\n      \n      For information about our versioning policy and practices—including support and deprecation practices, as well as the release schedule—see Angular versioning and releases. \n      "
+    },
+    {
+      "id": 5,
+      "url": "/guide/releases",
+      "title": "Angular versioning and releases",
+      "publishTime": 1541048800000,
+      "tags": [
+        "security"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "We recognize that you need stability from the Angular framework. Stability ensures that reusable components and libraries, tutorials, tools, and learned practices don't become obsolete unexpectedly. Stability is essential for the ecosystem around Angular to thrive.\n\n      We also share with you the desire for Angular to keep evolving. We strive to ensure that the foundation on top of which you are building is continuously improving and enabling you to stay up-to-date with the rest of the web ecosystem and your user needs.\n\n      This document contains the practices that we follow to provide you with a leading-edge app development platform, balanced with stability. We strive to ensure that future changes are always introduced in a predictable way. We want everyone who depends on Angular to know when and how new features are added, and to be well-prepared when obsolete ones are removed.\n\n      See Updating your projects for information about how to update your apps and libraries to the latest version of Angular.\n      "
+    },
+    {
+      "id": 6,
+      "url": "/guide/router",
+      "title": "Routing & Navigation",
+      "publishTime": 1540548800000,
+      "tags": [
+        "routing",
+        "navigation"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "The browser is a familiar model of application navigation:\n\n      Enter a URL in the address bar and the browser navigates to a corresponding page.\n      Click links on the page and the browser navigates to a new page.\n      Click the browser's back and forward buttons and the browser navigates backward and forward through the history of pages you've seen.\n\n      The Angular Router (\"the router\") borrows from this model. It can interpret a browser URL as an instruction to navigate to a client-generated view. It can pass optional parameters along to the supporting view component that help it decide what specific content to present. You can bind the router to links on a page and it will navigate to the appropriate application view when the user clicks a link. You can navigate imperatively when the user clicks a button, selects from a drop box, or in response to some other stimulus from any source. And the router logs activity in the browser's history journal so the back and forward buttons work as well.\n      "
+    },
+    {
+      "id": 7,
+      "url": "/guide/http",
+      "title": "HttpClient",
+      "publishTime": 1541048800000,
+      "tags": [
+        "http"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "Most front-end applications communicate with backend services over the HTTP protocol. Modern browsers support two different APIs for making HTTP requests: the XMLHttpRequest interface and the fetch() API.\n\n      The HttpClient in @angular/common/http offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers. Additional benefits of HttpClient include testability features, typed request and response objects, request and response interception, Observable apis, and streamlined error handling.\n\n      You can run the live example / download example that accompanies this guide.\n      "
+    },
+    {
+      "id": 8,
+      "url": "/guide/reactive-forms",
+      "title": "Reactive Forms",
+      "publishTime": 1541538800000,
+      "tags": [
+        "form",
+        "reactive"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "Reactive forms use an explicit and immutable approach to managing the state of a form at a given point in time. Each change to the form state returns a new state, which maintains the integrity of the model between changes. Reactive forms are built around observable streams, where form inputs and values are provided as streams of input values, which can be accessed synchronously.\n\n      Reactive forms also provide a straightforward path to testing because you are assured that your data is consistent and predictable when requested. Any consumers of the streams have access to manipulate that data safely.\n\n      Reactive forms differ from template-driven forms in distinct ways. Reactive forms provide more predictability with synchronous access to the data model, immutability with observable operators, and change tracking through observable streams. If you prefer direct access to modify data in your template, template-driven forms are less explicit because they rely on directives embedded in the template, along with mutable data to track changes asynchronously. See the Forms Overview for detailed comparisons between the two paradigms.\n      "
+    },
+    {
+      "id": 9,
+      "url": "/guide/observables",
+      "title": "Observables",
+      "publishTime": 1541248800000,
+      "tags": [
+        "observables",
+        "rxjs"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "Observables provide support for passing messages between publishers and subscribers in your application. Observables offer significant benefits over other techniques for event handling, asynchronous programming, and handling multiple values.\n\n      Observables are declarative—that is, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.\n\n      An observable can deliver multiple values of any type—literals, messages, or events, depending on the context. The API for receiving values is the same whether the values are delivered synchronously or asynchronously. Because setup and teardown logic are both handled by the observable, your application code only needs to worry about subscribing to consume values, and when done, unsubscribing. Whether the stream was keystrokes, an HTTP response, or an interval timer, the interface for listening to values and stopping listening is the same.\n\n      Because of these advantages, observables are used extensively within Angular, and are recommended for app development as well.\n      "
+    },
+    {
+      "id": 10,
+      "url": "/guide/pipes",
+      "title": "Pipes",
+      "publishTime": 1541148800000,
+      "tags": [
+        "pipes"
+      ],
+      "author": "thanhpd",
+      "authorUrl": "https://github.com/thanhpd",
+      "content": "Every application starts out with what seems like a simple task: get data, transform them, and show them to users. Getting data could be as simple as creating a local variable or as complex as streaming data over a WebSocket.\n\n      Once data arrives, you could push their raw toString values directly to the view, but that rarely makes for a good user experience. For example, in most use cases, users prefer to see a date in a simple format like April 15, 1988 rather than the raw string format Fri Apr 15 1988 00:00:00 GMT-0700 (Pacific Daylight Time).\n\n      Clearly, some values benefit from a bit of editing. You may notice that you desire many of the same transformations repeatedly, both within and across many applications. You can almost think of them as styles. In fact, you might like to apply them in your HTML templates as you do styles.\n\n      Introducing Angular pipes, a way to write display-value transformations that you can declare in your HTML.\n\n      You can run the live example / download example in Stackblitz and download the code from there.\n      "
+    }
+  ]
+}
