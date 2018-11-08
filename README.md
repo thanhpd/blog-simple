@@ -1,8 +1,11 @@
 # SimpleBlog
 
 Preview: https://jovial-hoover-a47b07.netlify.com
+
 Run on local machine: `npm run serve`
+
 Build on local machine: `npm run build:prod`
+
 Demo account: demo/demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
